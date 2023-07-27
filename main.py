@@ -1,3 +1,4 @@
+# This variable created 1st
 MENU = {
     "espresso": {
         "ingredients": {
@@ -33,10 +34,23 @@ resources = {
 
 
 def main():
+    # This function created 2nd
     is_on = True
-    # TODO: 1. Prompt user by asking “What would you like? (espresso/latte/cappuccino):”
-    # TODO: 2. Turn off the Coffee Machine by entering “off” to the prompt.
-    # TODO: 3. Print report (resources and money).
+    while is_on:
+        # TODO: 1. Prompt the user by asking “What would you like? (espresso/latte/cappuccino):”
+        choice = input("What would you like? (espresso/latte/cappuccino): ")
+    
+        # TODO: 2. Turn off the Coffee Machine by entering “off” to the prompt.
+        if choice == "off":
+            is_on = False
+            
+        # TODO: 3. Print report (resources and money).
+        elif choice == "report":
+            print(f"Water: {resources['water']}ml")
+            print(f"Milk: {resources['milk']}ml")
+            print(f"Coffee: {resources['coffee']}g")
+            print(f"Money: ${profit}")
+            
     # TODO: 4. Check resources sufficient or insufficient.
     # TODO: 5. Process coins.
     # TODO: 6. Check transaction succeed or failed.
